@@ -13,12 +13,14 @@
  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
  <title>Document</title>
 </head>
+
 <style>
  .design{
  padding-left: 15px;
  padding-top: 10px;
  padding-right: 50%;}
 </style>
+
 <body>
  <h1>Task1</h1>
  <p>Enter 5 grades (each out of 100) into the following form:</p>
@@ -41,11 +43,15 @@
  <input type="num2" class="form-control" id="num2" placeholder="Example input" name="textInput">
  </div>
  </div>
+
  <br>
+
  <div class="design">
  <div class="form-group">
  <label for="textInputLabel">Grade 3</label>
+
  <br>
+
  <input type="num3" class="form-control" id="num3" placeholder="Example input" name="textInput">
  </div>
  </div>
@@ -53,19 +59,27 @@
  <div class="design">
  <div class="form-group">
  <label for="textInputLabel">Grade 4</label>
+
  <br>
+
  <input type="num4" class="form-control" id="num4" placeholder="Example input" name="textInput">
  </div>
  </div>
+
  <br>
+
  <div class="design">
  <div class="form-group">
  <label for="textInputLabel">Grade 5</label>
+
  <br>
+
  <input type="num5" class="form-control" id="num5" placeholder="Example input" name="textInput">
  </div>
  </div>
+
  <br>
+ 
  <button type="button" class="btn btn-success" type="button" name="toggleButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModal" onclick="adjusted()">Calculate Adjusted GPA</button>
  <button type="button" class="btn btn-secondary" type="button" onclick="resetform()">Reset</button>
  <button type="button" class="btn btn-primary" type="button" name="toggleButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModal" onclick="calGPA()">Calculate GPA</button>
@@ -155,7 +169,7 @@
  var integer3=parseInt(grade3);
  var integer4=parseInt(grade4);
  var integer5=parseInt(grade5);
- 
+
  var total;
  var average1=0;
  var arr = [integer1, integer2, integer3, integer4, integer5];
