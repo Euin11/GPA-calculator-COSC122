@@ -81,7 +81,7 @@
  <br>
  
  <button type="button" class="btn btn-success" type="button" name="toggleButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModal" onclick="adjusted()">Calculate Adjusted GPA</button>
- <button type="button" class="btn btn-secondary" type="button" onclick="resetform()">Reset</button>
+ <button type="button" class="btn btn-secondary" type="button" onclick="resetData()">Reset</button>
  <button type="button" class="btn btn-primary" type="button" name="toggleButton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newModal" onclick="calGPA()">Calculate GPA</button>
  </form>
  <div class="modal" tabindex="-1" id="newModal">
@@ -128,9 +128,11 @@
  for(var i = 0; i < arr.length; i++){
  average1 += arr[i]; 
  }
+
  console.log(average1)
  total=average1/arr.length;
  document.getElementById("content").innerHTML = "You entered the following information into the form: " + total;
+
  if(total>=90){
  document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A+";
  }else if(total<=89 && total>=85){
@@ -182,11 +184,14 @@
  for(var i = 0; i < arr.length; i++){
  average1 += arr[i]; 
  }
+
  console.log(average1)
  arr.sort();
  average1 = average1 -arr[0];
  total=average1/(arr.length-1);
+
  document.getElementById("content").innerHTML = "You entered the following information into the form: " + total;
+
  if(total>=90){
  document.getElementById("content").innerHTML = "You entered the following information into the form: " + total + "<br>"+ "<br>"+ "<br>" +"Based on this overall score, your letter grade will be: A+";
  }else if(total<=89 && total>=85){
@@ -213,7 +218,7 @@
  }
 
  }
- function resetform() {
+ function resetData() {
  document.getElementById("myForm").reset();
 }
 </script>
